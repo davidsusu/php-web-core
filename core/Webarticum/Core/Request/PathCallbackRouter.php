@@ -61,7 +61,7 @@ class PathCallbackRouter implements Router {
                 $token = $match[0];
                 $offset = $match[1];
                 $subPattern = self::DEFAULT_PATTERN;
-                if (!empty($matches[4][$i])) {
+                if (!empty($matches[4][$i][0])) {
                     $subPattern = $matches[4][$i][0];
                     $subPattern = preg_replace('#((^|[^\\\\])(\\\\\\\\)*)\\(#', '$2(?:', $subPattern);
                 }
